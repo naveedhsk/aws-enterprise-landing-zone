@@ -189,9 +189,8 @@ This project uses real AWS resources and incurs actual costs. Always:
 
 Questions about the implementation or want to discuss cloud architecture and FinOps strategies?
 
-- **LinkedIn**: [Your LinkedIn Profile]
-- **Email**: [Your Email]
-- **Blog**: [Your Blog if you have one]
+- **LinkedIn**: https://www.linkedin.com/in/naveedh-sk/
+
 
 ---
 
