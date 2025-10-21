@@ -1,4 +1,4 @@
-# AWS Landing Zone Modernization — Hands‑On MVP
+# AWS Enterprise Landing Zone Modernization — Hands‑On MVP
 **Last updated:** 2025-10-16
 
 This repo is a **hands-on, Terraform-first MVP** to demo a modernized landing zone:
