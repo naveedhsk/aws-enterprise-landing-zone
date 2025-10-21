@@ -9,21 +9,21 @@ resource "aws_s3_bucket" "templates" {
   force_destroy = true
 }
 
-# Upload a CloudFormation template for ECS (placeholder stored in this module)
+# Upload ECS Fargate CloudFormation template to S3
 resource "aws_s3_object" "ecs_tpl" {
-  bucket = aws_s3_bucket.templates.id
-  key    = "ecs-fargate.yml"
-  content= file("${path.module}/templates/ecs-fargate.yml")
+  bucket  = aws_s3_bucket.templates.id
+  key     = "ecs-fargate.yml"
+  content = file("${path.module}/templates/ecs-fargate.yml")
 }
 
 resource "aws_servicecatalog_product" "ecs_gp" {
-  name = "Golden Path - ECS"
+  name  = "Golden Path - ECS"
   owner = "Platform Team"
   type  = "CLOUD_FORMATION_TEMPLATE"
   provisioning_artifact_parameters {
-    name = "v1"
+    name         = "v1"
     template_url = "https://${aws_s3_bucket.templates.bucket}.s3.amazonaws.com/${aws_s3_object.ecs_tpl.key}"
-    type = "CLOUD_FORMATION_TEMPLATE"
+    type         = "CLOUD_FORMATION_TEMPLATE"
   }
 }
 

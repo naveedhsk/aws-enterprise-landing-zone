@@ -8,7 +8,7 @@
 
 ## 🎯 Project Overview
 
-This repository demonstrates a hands-on approach to building AWS Landing Zone components with a strong emphasis on **FinOps automation** and cost management. Built as a learning project with real AWS resources and actual cost tracking.
+This repository demonstrates a hands-on approach to building AWS Landing Zone components with a strong emphasis on **FinOps automation** and cost management. Built as a personal learning project with real AWS resources and actual cost tracking.
 
 **Key Achievement:** Implemented enterprise-grade cloud governance patterns while maintaining strict cost control through automation and daily monitoring.
 
@@ -64,8 +64,8 @@ Cost per Learning Hour: $0.18
 
 1. **Clone and Setup**
    ```bash
-   git clone https://github.com/your-username/aws-landing-zone-poc.git
-   cd aws-landing-zone-poc
+   git clone https://github.com/naveedhsk/aws-enterprise-landing-zone.git
+   cd aws-enterprise-landing-zone
    ```
 
 2. **Configure AWS Access**
@@ -101,9 +101,8 @@ terraform destroy -auto-approve
 ## 📁 Repository Structure
 
 ```
-aws-landing-zone-poc/
+aws-enterprise-landing-zone/
 ├── 📋 README.md                    # This file
-├── 📖 GUIDE.md                     # Detailed implementation guide
 ├── ⚙️ providers.tf                 # Terraform configuration
 ├── 🔧 Makefile                     # Automation commands
 │
@@ -172,7 +171,7 @@ aws-landing-zone-poc/
 
 ## 🤝 Contributing
 
-This is a learning project, but feedback and improvements are welcome! Please:
+This is a personal learning project, but feedback and suggestions are welcome! Feel free to:
 1. Fork the repository
 2. Create a feature branch
 3. Submit a pull request with detailed description
@@ -187,7 +186,7 @@ This project uses real AWS resources and incurs actual costs. Always:
 
 ## 📧 Contact
 
-Questions about the implementation or want to discuss cloud architecture and FinOps strategies?
+Questions about the implementation or cloud architecture?
 
 - **LinkedIn**: https://www.linkedin.com/in/naveedh-sk/
 
@@ -196,4 +195,4 @@ Questions about the implementation or want to discuss cloud architecture and Fin
 
 **Built with ☁️ on AWS • 💰 FinOps Automation • 🔧 Infrastructure as Code**
 
-> *This project demonstrates practical cloud engineering skills with a focus on cost-conscious architecture and automation. Perfect for showcasing enterprise-ready cloud development practices.*
+> *A practical demonstration of cloud engineering skills with focus on cost-conscious architecture and automation.*

@@ -1,7 +1,7 @@
 data "aws_availability_zones" "available" {}
 
 resource "aws_ec2_transit_gateway" "this" {
-  description = "LZ TGW"
+  description                     = "LZ TGW"
   default_route_table_association = "enable"
   default_route_table_propagation = "enable"
 }

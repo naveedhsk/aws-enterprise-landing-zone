@@ -1,9 +1,9 @@
 variable "profile" {
-  type = string
+  type    = string
   default = "mgmt"
 }
 variable "region" {
-  type = string
+  type    = string
   default = "us-west-2"
 }
 

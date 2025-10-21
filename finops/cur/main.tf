@@ -1,19 +1,19 @@
 # CUR must be in us-east-1
 resource "aws_cur_report_definition" "cur" {
-  provider = aws.use1
-  report_name = "org-cur"
-  time_unit   = "HOURLY"
-  format      = "Parquet"
-  compression = "Parquet"
+  provider                   = aws.use1
+  report_name                = "org-cur"
+  time_unit                  = "HOURLY"
+  format                     = "Parquet"
+  compression                = "Parquet"
   additional_schema_elements = ["RESOURCES"]
-  s3_bucket   = aws_s3_bucket.cur.bucket
-  s3_region   = "us-east-1"
-  s3_prefix   = "cur/"
-  additional_artifacts = ["ATHENA"]
+  s3_bucket                  = aws_s3_bucket.cur.bucket
+  s3_region                  = "us-east-1"
+  s3_prefix                  = "cur/"
+  additional_artifacts       = ["ATHENA"]
 }
 
 resource "aws_s3_bucket" "cur" {
-  bucket = "lz-cur-CHANGE-ME"
+  bucket        = "lz-cur-naveedh"
   force_destroy = true
 }
 

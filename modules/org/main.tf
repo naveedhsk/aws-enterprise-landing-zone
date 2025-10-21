@@ -3,12 +3,12 @@ resource "aws_organizations_organization" "this" {
 }
 
 resource "aws_s3_bucket" "org_logs" {
-  bucket = var.log_bucket_name
+  bucket        = var.log_bucket_name
   force_destroy = true
 }
 
 resource "aws_kms_key" "logs" {
-  description = "KMS for org logs"
+  description             = "KMS for org logs"
   deletion_window_in_days = 7
 }
 
@@ -21,9 +21,9 @@ resource "aws_cloudtrail" "org" {
   is_multi_region_trail         = true
 }
 
-# Minimal OU set (examples)
+# Create organizational units
 resource "aws_organizations_organizational_unit" "ou" {
-  count      = length(var.org_unit_names)
-  name       = var.org_unit_names[count.index]
-  parent_id  = aws_organizations_organization.this.roots[0].id
+  count     = length(var.org_unit_names)
+  name      = var.org_unit_names[count.index]
+  parent_id = aws_organizations_organization.this.roots[0].id
 }
